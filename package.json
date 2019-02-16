@@ -1,5 +1,5 @@
 {
-  "name": "comp308-w2019-lesson5b",
+  "name": "comp308-w2019-lesson6b",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "description": "Mongo and Mongoose Demo",
   "main": "server.js",
-  "author": "Tom Tsiliopoulos",
+  "author": "Abdulghafor Nurali",
   "license": "ISC",
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
@@ -47,10 +47,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CentennialCollege/COMP308-W2019-Lesson5B.git"
+    "url": "git+https://github.com/Abdul025/COMP308-W2019-Lesson6B.git"
   },
   "bugs": {
-    "url": "https://github.com/CentennialCollege/COMP308-W2019-Lesson5B/issues"
+    "url": "https://github.com/Abdul025/COMP308-W2019-Lesson6B/issues"
   },
-  "homepage": "https://github.com/CentennialCollege/COMP308-W2019-Lesson5B#readme"
+  "homepage": "https://github.com/Abdul025/COMP308-W2019-Lesson6B#readme"
 }

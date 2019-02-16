@@ -62,8 +62,12 @@ app.use(passport.session());
 //create a user model
 
 //implement a user authentication strategy
+passport.use(User.createStrategy());
 
 //serialize and deserialize the user information
+passport.serializeUser(user.serializeUser());
+passport.deserializeUser(user.deserializeUser());
+
 
 app.use('/', indexRouter);
 app.use('/contact-list', contactRouter);
