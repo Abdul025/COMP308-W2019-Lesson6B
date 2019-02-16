@@ -22,21 +22,21 @@ module.exports.displayContactPage = (req, res, next) => {
   }
 
   module.exports.displayLoginPage = (req, res, next) => {
-    //TODO 
+    // TODO
   }
 
   module.exports.processLoginPage = (req, res, next) => {
-    //TODO 
+    // TODO
   }
 
   module.exports.displayRegisterPage = (req, res, next) => {
-    //TODO 
+    // TODO
   }
 
   module.exports.processRegisterPage = (req, res, next) => {
-    //TODO 
+    // TODO
   }
 
   module.exports.performLogout = (req, res, next) => {
-    //TODO 
-  }
+    // TODO
+}

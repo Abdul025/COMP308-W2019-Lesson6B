@@ -18,14 +18,20 @@ router.get('/services', indexController.displayServicesPage);
 /* GET contact page. */
 router.get('/contact', indexController.displayContactPage);
 
-/* GET Displays the login page. */
+/* GET - displays the Login Page */
 router.get('/login', indexController.displayLoginPage);
-/* POST - processes the login page. */
+
+/* POST - processes the Login Page */
 router.post('/login', indexController.processLoginPage);
-/* GET Displays the user regestration page. */
+
+/* GET - displays the User Registration Page */
 router.get('/register', indexController.displayRegisterPage);
-/* POST - processes the user User regestration Page */
+
+/* POST - processes the User Registration Page */
 router.post('/register', indexController.processRegisterPage);
-/* GET - perform user Logout */
+
+/* GET - perform user logout */
 router.get('/logout', indexController.performLogout);
+
+
 module.exports = router;

@@ -30,7 +30,7 @@
   },
   "description": "Mongo and Mongoose Demo",
   "main": "server.js",
-  "author": "Abdulghafor Nurali",
+  "author": "Tom Tsiliopoulos",
   "license": "ISC",
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
@@ -44,7 +44,7 @@
     "@types/passport": "^1.0.0",
     "@types/passport-local": "^1.0.33",
     "@types/passport-local-mongoose": "^4.0.12"
-  },
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Abdul025/COMP308-W2019-Lesson6B.git"

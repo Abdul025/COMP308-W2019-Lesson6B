@@ -1,11 +1,11 @@
+// moddules for node and express
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
-
-//module for authentication 
+// modules for authentication
 let session = require('express-session');
 let passport = require('passport');
 let passportLocal = require('passport-local');
@@ -42,31 +42,32 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-//setup express-session
+// setup express-session
 app.use(session({
   secret: "SomeSecret",
   saveUninitialized: false,
   resave: false
-
 }));
 
-//initialize flash
+// initialize flash
 app.use(flash());
 
-//initialize passport
+// initialize passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-//passport use configuration
+// pasport user configuration
 
-//create a user model
+// create a User model
+let userModel = require('../models/user');
+let User = userModel.User;
 
-//implement a user authentication strategy
+// implement a User authetication strategy
 passport.use(User.createStrategy());
 
-//serialize and deserialize the user information
-passport.serializeUser(user.serializeUser());
-passport.deserializeUser(user.deserializeUser());
+// serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 
 app.use('/', indexRouter);

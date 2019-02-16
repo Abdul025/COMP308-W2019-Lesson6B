@@ -1,53 +1,55 @@
-//require modules for our use model
+// require modules for our User Model
+let mongoose = require("mongoose");
+let passportLocalMongoose = require("passport-local-mongoose");
 
-let mongoose = require('mongoose');
-let passportLocalMongoose = require(passport - local - mongoose);
-
-let userSchema = mongoose.Schema({
+let userSchema = mongoose.Schema(
+  {
     username: {
-        type: String,
-        default: '',
-        trim: true,
-        require: "username is required"
-
+      type: String,
+      default: "",
+      trim: true,
+      required: "username is required"
     },
-    /*taken out because password will be encrypted by passport-local-mongoose
+    /* taken out because password will be encrypted by passport-local-mongoose
     password: {
         type: String,
         default: '',
         trim: true,
-        require: "passport is required"
+        required: 'password is required'
     }
     */
     email: {
-        type: String,
-        default: '',
-        trim: true,
-        require: "email is required"
-
+      type: String,
+      default: "",
+      trim: true,
+      required: "email is required"
     },
-    displayname: {
-        type: String,
-        default: '',
-        trim: true,
-        require: "Display Name is required"
-
+    displayName: {
+      type: String,
+      default: "",
+      trim: true,
+      required: "Display Name is required"
     },
     created: {
-        type: Date,
-        default: Date.now
+      type: Date,
+      default: Date.now
+    },
+    update: {
+      type: Date,
+      default: Date.now
     }
-},
-    {
-        collection: "users"
-    }
+  },
+  {
+    collection: "users"
+  }
 );
 
-//configure options for the UserSchema
+// configure options for the UserSchema
 
 let options = ({
-    missingPasswordError: "Wrong / Missing password"
+    missingPasswordError: "Wrong / Missing Password"
 });
 
 userSchema.plugin(passportLocalMongoose, options);
+
 module.exports.User = mongoose.model('User', userSchema);
